@@ -47,13 +47,12 @@ public class PhoneSearchServlet extends HttpServlet {
 				ResultSet rs = ps.executeQuery();
 
 				while (rs.next()) {
-					myname = rs.getString(3);
-					myphone = rs.getString(4);
-					myemail = rs.getString(5);
-					myaddress = rs.getString(6);
-					cperson = rs.getString(7);
-					purpose = rs.getString(8);
-
+					myname = rs.getString(2);
+					myphone = rs.getString(3);
+					myemail = rs.getString(4);
+					myaddress = rs.getString(5);
+                  cperson=rs.getString(6);
+                   purpose=rs.getString(7);
 				}
 				//out.println("myname : " + v.myname + "   purpose   " + v.purpose);
 				
@@ -63,7 +62,7 @@ public class PhoneSearchServlet extends HttpServlet {
 				  session.setAttribute("myaddress",myaddress);
 				  session.setAttribute("cperson",cperson);
 				  session.setAttribute("purpose",purpose);
-				// out.println("myname : "+myname+"   purpose   "+purpose);
+				//out.println("myname : "+myname+" );
 		
 				//session.setAttribute("v",v);
 				

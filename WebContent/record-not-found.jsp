@@ -10,13 +10,46 @@
 <title> Visitor's details </title>
 <link rel="stylesheet" type="text/css" href="/BILVisiterForm/CSS/b.css">
 <link rel=stylesheet href="/BILVisiterForm/CSS/cs.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
+table td, table td * {
+    vertical-align: top;
+}
+.btn {
+    background-color: DodgerBlue; /* Blue background */
+    border:2px	; /* Remove borders */
+    color:yellow; /* White text */
+    padding: 10px 15px; /* Some padding */
+    font-size: 45px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+.btn1 {
+    background-color: DodgerBlue; /* Blue background */
+    border:2px	; /* Remove borders */
+    color:yellow; /* White text */
+    padding: 9px 15px; /* Some padding */
+    font-size: 25px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
 .yoyo
 {border-radius: 13px 13px 13px 13px;
 -moz-border-radius: 13px 13px 13px 13px;
 -webkit-border-radius: 13px 13px 13px 13px;
 border: 9px double #490da3;
-}</style></head>
+}
+.image
+{background-color:white;
+}
+.white
+{background-color:green;
+}
+.yellow
+{background-color:yellow;
+margin:10px;
+padding:10px	;
+}
+</style></head>
 <%
 response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 response.addHeader("Pragma", "no-cache");
@@ -55,7 +88,7 @@ response.setDateHeader("Expires", 0);
 						function logout()
 						{
 							window.location="index.jsp";
-							//session.removeAttribute("User");
+							session.removeAttribute("User");
 							
 							
 						}
@@ -78,58 +111,70 @@ response.setDateHeader("Expires", 0);
 						
 					</script>
 
-<body><script src="/BILVisiterForm/JS/webcam.js"></script>
-
-	<marquee scrollamount=20 direction=left height=46.2	behavior=alternate bgcolor=orange>
-		<font color=blue face="aeril" size=7 > <b> WELCOME TO BHARTI INFRATEL</b>
-		</font>
-	</marquee>
-		<div class=shubh>
+<body class=image><script src="/BILVisiterForm/JS/webcam.js"></script>
+<div align=right class=white>
+<br>
+<a href="javascript:void(logout())"><button type="button"   class="btn"> 
+      <i class="fa fa-home"></i>
+    </button>
+</a>
+							</div>
+	
+		<div class=white>
+		<br><br><br><br>
 				
 				<form name="searchform" action="SearchServlet" method="get">
-				<center>
-					<input type="text" name="search" id="search"  tabindex="1" required autofocus placeholder="Enter Visitor Id" style="border: 2px solid black;background:white;">
-					<button type=submit style="color:white;  background-color:red; width: 80px; height: 30px;" name="submit" type="submit">
-					Search </button> 
-		</center><br><font color=red size=3>	<center><b> No Record Found!</b> </center></font></form>
-		</div>
+				
+				
+				<font color=blue size=20 class=yellow> <b>Welcome Shubham !</b> </font>
+					<input type="text" name="search" id="search"  tabindex="1" required autofocus placeholder="Enter Visitor Id" style="margin-left:200px;border: 2px solid black;background:white;height:40px;width:200px;">
+					<button type=submit  name="submit" type="submit" class=btn1>
+					<i class="fa fa-search"></i> </button> 
+					
+			</form>
+		<br>
 		
-		<div >
-		<table  width=100% height=100px>
-		<tr>
-		<td>
+		<center>
+		<font color=pink size=4 style="margin-left:130px;"> <b> Record not Found..</b></font> </center>
+		<br> <br>
+		</div>
+	<table border=2 height=520px width=100%>
+	<tr>
+	<td  class=white>
+
+			
+		
+		<div valign=top>
+		
+		
 		<form action="CounterServlet" method=post>
 		<input type=hidden value="shubham" name=hidden>
-		<button type=submit style="color: white; background-color:red; width: 100px; height: 30px;">New Visitor</button>
+		<button type=submit style="color:yellow; background-color:green; width: 100px; height: 35px;">New Visitor</button>
 			</form>
-			</td>	
+			<br>	
+			<a href=printpage.jsp><button  style="color:yellow; background-color:green; width: 100px; height:40px;">Generate Report</button></a>
+		
 			
-							<td>
-							<center>
-							<font color=pink size=5><b>Visitor Out</b></font>
-							<br><br>
-							<form action="OutServlet" method=post>
-		<input type=text  placeholder="Enter Visitor ID " name=sid id=sid >
-		<button type=submit style="color: white; background-color:red; width: 100px; height: 30px;">Out</button>
-			</form></center>
-			</td>
-			<td align=right><a href="javascript:void(logout())"><button 
-							style="color: white; background-color:red; width: 80px; height: 30px;">Log Out</button></a>
-							</td></tr></table>
-						</div>	
-				
-				<hr>
-				<div>
-				<center>
-				<font color=yellow size=7><b> Print Report </b></font> <br><br><br><br><br><br>
-				
-				<form action="ReportServlet" method=post>
-				<font color=red size=3><b>TO</b> </font>: <input type=date placeholder"select date" name=todate id=todate>
-				&nbsp;&nbsp;&nbsp;<font color=red size=3><b>FROM</b></font> <input type=date placeholder="select date" name=fromdate id=fromdate >
-				<button type=submit style="color: white;margin-left:2%; background-color:red; width: 100px; height: 35	px;">Generate Report</button>
-				</form>
-				</center>
 				</div>
+				</td>
+				<td>
+							<div >
+							<center>
+							<br><br><br><br><br><br>
+							
+						<font color=blue size=6 class=yellow> <b>VISITOR OUT </b> </font>
+							<br><br><br>
+							<br>
+							<form action="OutServlet" method=post>
+		<input type=text  placeholder="Enter Visitor ID " name=sid id=sid style="border: 2px solid black;background:white;height:35px;width:200px;">
+		<button type=submit style="color:yellow; background-color:green; width:70px; height: 36px;">Out</button>
+			</form></center>
+			
+						</div>	
+						</td>
+						</tr>
+						
+				</table>
 	
 
 </body>

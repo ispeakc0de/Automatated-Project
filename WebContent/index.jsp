@@ -1,55 +1,52 @@
-<%@page import="mypack.*" %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<link rel=stylesheet href="c.css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
 <html>
-<head>
-<title> Login Page </title><script>
-    history.forward();
-    history.backward();
-</script>
+  <head>
 
-<style>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  </head>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading"><center>login Form </center></h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Admin Login</h2> 
+   <p>Please enter your username and password</p>
+   </div>
+    <form id="Login" action=login method=post>
 
-.yoyo
-{border-radius: 13px 13px 13px 13px;
--moz-border-radius: 13px 13px 13px 13px;
--webkit-border-radius: 13px 13px 13px 13px;
-border: 9px double white;
-background:green;
-}
+        <div class="form-group">
 
-</style>
 
-</head><%
-response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-response.addHeader("Pragma", "no-cache");
-response.setDateHeader("Expires", 0);
-%>
+            <input type="text"  name=username class="form-control" id="inputEmail" placeholder="Email Address">
 
-<body  class=yoyo ><script src="/BILVisiterForm/JS/webcam.js"></script>
+        </div>
 
-<div border=2 >
-<div align=left>
- 
-<img src="/BILVisiterForm/a.jpeg" align=left height=94% width=40% border=1 \>
+        <div class="form-group">
+
+            <input type="password" name=password class="form-control" id="inputPassword" placeholder="Password">
+
+        </div>
+        <div class="forgot">
+   
 </div>
-<center>
-<font color=pink size=20><br>
+        <button type="submit" class="btn btn-primary">Login</button>
 
-<b> Welcome To BIL </b> 
-<br><br>
-<b>
- Visitor's Login Page </b> </font>
-<br><br><br>
+    </form>
+    </div>
+</div></div></div>
 
-<font size=5 color=yellow>
-<b> Enter Username and Password </b></font><br><br>
-<form name=login action="login" method="post">
-<label for="username"><font color=yellow> <b>Username</b></font>	 </label><font color=red> * </font>
-<input type=text name=username required id=username placeholder="Username" style=" border: 1px solid black;background:#FFFF99;height:25px;"	><br><br><font color=yellow><b>
-Password</b> </font><font color=red> * </font>&nbsp;
-<input type=password name=password placeholder="Password" id=password required style=" border: 1px solid black;background:#FFFF99;height:25px;"> <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type=submit name=submit style="background:red;color:white;height:30px;width:70px">&nbsp;&nbsp;
-</form> </center>
-</div></body></form>
+
+</body>
+</html>

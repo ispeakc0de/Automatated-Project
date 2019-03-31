@@ -1,7 +1,16 @@
 <html>
 <head>
 </head>
+<style>
+.image
+{background-image:url("/BILVisiterForm/shubh.jpeg");
+}
+.white
+{background-color:white;
+}
+</style>
 <script type="text/javascript">
+
 
 function printDiv(divName) {
 
@@ -31,7 +40,7 @@ function home()
 	<%@ page import="javax.servlet.annotation.WebServlet" %>
 	<%@ page import=" java.io.File" %>
 	
-	<body bgcolor=cyan>
+	<body class=image>
 	<a href="javascript:void(home
 				())"><button 
 							style="color: white;margin-left:94%;align:top; background-color:red; width: 80px; height: 40px;">Home Page</button></a>
@@ -49,7 +58,7 @@ function home()
 		//	ps.setString(1, formatter.format(date));
 			//out.print(mydata);
 			//sessiooutn.setAttribute("image",image);
-			out.print("<div id=print>");
+			out.print("<div id=print class=white>");
 		
 			 out.print("<table border=1 cellpadding=5>");  
 			out.print("<caption><b>Visitor's List </b></caption>");  
